@@ -24,6 +24,10 @@ public class Group {
         this.size = size;
         this.students = new Student[size];
     }
+    @Override
+    public String toString(){
+        return String.format("Group nuber - %d", groupNumber);
+    }
 
 
     public Student[] addStudent(Student student) {
