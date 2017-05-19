@@ -3,7 +3,7 @@ package week1.edition;
 /**
  * Created by Sherlock on 19.05.2017.
  */
- abstract class Book implements Edition {
+     public abstract class Book implements Edition {
 
     protected String name;
     protected String dataOfIssue;
@@ -23,7 +23,7 @@ package week1.edition;
                 name, dataOfIssue));
     }
 
-    abstract public void show();
+     public abstract void show();
 
 
 }
