@@ -1,4 +1,4 @@
-package edition;
+package week1.edition;
 
 /**
  * Created by Sherlock on 19.05.2017.
@@ -6,6 +6,7 @@ package edition;
 public interface Edition {
 
 
-   void getEditionName();
+    void getEditionName();
+
     void getBookType();
 }

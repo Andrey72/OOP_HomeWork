@@ -1,4 +1,4 @@
-package doctor;
+package week1.doctor;
 
 /**
  * Created by Sherlock on 19.05.2017.
