@@ -31,20 +31,28 @@ public class Group {
     }
 
 
+
+
     public boolean addStudent(Student student) {
         for (int i = 0; i < size; i++) {
             if (student.equals(students[i])) {
                 return false;
             }
         }
-        if (student == null || size == count) {
-            System.out.println("Full group!");
+
+         if (size < students.length) {
+            students[size++] = student;
+            return true;
         } else {
-            students[count++] = student;
+            Student[] biggerArrayStudents = new Student[students.length + size];
+            System.arraycopy(students, 0, biggerArrayStudents, 0, students.length);
+            biggerArrayStudents[size++] = student;
+             biggerArrayStudents[size++] =null;
+                     students = biggerArrayStudents;
             return true;
         }
-        return false;
     }
+
 
 
     public void showStudents() {

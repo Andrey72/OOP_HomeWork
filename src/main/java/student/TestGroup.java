@@ -8,7 +8,7 @@ public class TestGroup {
 
         Student student1 = new Student("Watsgen", "Muzich", 29);
         Student student2 = new Student("Max", "Muzi", 29);
-        Student student3 = new Student("Wacgen", "Muzichenko", 29);
+        Student student3 = new Student("Wac", "Muzichenko", 29);
         Student student4 = new Student("Ma5", "Muzichenko", 27);
         Student student7 = new Student("Andrey", "Kor", 27);
 
@@ -18,19 +18,19 @@ public class TestGroup {
 
 
         group.addStudent(student1);
-        group.addStudent(student1);
-        group.addStudent(student1);
+        group.addStudent(student2);
+        group.addStudent(student3);
         group.addStudent(student4);
-        //  group.addStudent(student7);
+        group.addStudent(student7);
         // group.addStudent(student4);
 
 
-        //  group.showStudents();
+          group.showStudents();
         // Arrays.sort(students);
-        group.showStudents();
+        //group.showStudents();
 
         System.out.println("***********************");
-        group.removeStudent(0);
+      /* // group.removeStudent(0);
         group.showStudents();
         System.out.println("***********************");
         group.updateStudent(student1, 2);
@@ -41,6 +41,6 @@ public class TestGroup {
         group.sortByName();
         group.showStudents();
         System.out.println("*********************");
-
+*/
     }
 }
