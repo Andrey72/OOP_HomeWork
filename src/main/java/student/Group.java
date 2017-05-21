@@ -104,7 +104,7 @@ public class Group {
         }
     }
 
-
+    @Override
     public boolean equals(Object group) {
         if (group == null || !(group instanceof Group)) return false;
         Group temp = (Group) group;

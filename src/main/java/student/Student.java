@@ -42,7 +42,7 @@ public class Student implements Comparable {
     }
 
 
-    public boolean equals(Student student) {
+  /*  public boolean equals(Student student) {
 
         if (student == null) return false;
         if (student == this) return true;
@@ -53,6 +53,19 @@ public class Student implements Comparable {
             return true;
         }
 
+        return false;
+    }*/
+
+    @Override
+    public boolean equals(Object student) {
+        if (student == null) return false;
+        if (student == this) return true;
+
+        Student temp = (Student) student;
+        if (this.name.equals(temp.name) && this.surname.equals(temp.surname) &&
+                this.age == temp.age) {
+            return true;
+        }
         return false;
     }
 
