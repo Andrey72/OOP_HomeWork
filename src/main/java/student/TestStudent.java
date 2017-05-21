@@ -1,4 +1,4 @@
-package student;
+package main.java.student;
 
 /**
  * Created by Sherlock on 19.05.2017.

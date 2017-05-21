@@ -1,4 +1,4 @@
-package student;
+package main.java.student;
 
 import java.util.Arrays;
 
@@ -10,7 +10,7 @@ public class Group {
     private int groupNumber;
     private Student[] students;
     private int size;
-    private int countSt = 0;
+    private int count = 0;
 
 
     public Group(int groupNumber, Student[] students) {
@@ -24,20 +24,26 @@ public class Group {
         this.size = size;
         this.students = new Student[size];
     }
+
     @Override
-    public String toString(){
+    public String toString() {
         return String.format("Group nuber - %d", groupNumber);
     }
 
 
-    public Student[] addStudent(Student student) {
-        if (countSt == size) {
+    public boolean addStudent(Student student) {
+        for (int i = 0; i < size; i++) {
+            if (student.equals(students[i])) {
+                return false;
+            }
+        }
+        if (student == null || size == count) {
             System.out.println("Full group!");
         } else {
-            students[countSt] = student;
-            countSt++;
+            students[count++] = student;
+            return true;
         }
-        return students;
+        return false;
     }
 
 
@@ -46,16 +52,15 @@ public class Group {
         System.out.println(Arrays.toString(students));
     }
 
-    public void removeStudent(int countSt) {
-        if (countSt < 0 || students.length - 1 < countSt) {
+    public boolean removeStudent(int position) {
+        if (position < 0 || size <= position) {
             System.out.println("Student don't exist");
+            return false;
         } else {
-            Student[] temp = new Student[students.length - 1];
-
-            System.arraycopy(students, countSt + 1, temp, 0, temp.length - countSt);
-            System.arraycopy(students, 0, temp, temp.length - countSt, countSt);
-
-            students = temp;
+            System.arraycopy(students, position + 1, students, position, size - position - 1);
+            students[size - 1] = null;
+            size--;
+            return true;
         }
     }
 
@@ -77,24 +82,40 @@ public class Group {
 */
 
     public void updateStudent(Student student, int index) {
-        if (  student == null || index < 0 || index > students.length - 1){
+        if (student == null || index < 0 || index > students.length - 1) {
             System.out.println("Can not be replaced");
-        }
-        else{
+        } else {
             students[index] = student;
         }
     }
-    public void sortByName(){
+
+    public void sortByName() {
         Student temp = new Student();
-        for (int i = students.length - 1 ; i > 0 ; i--) {
-            for(int j = 0; j < i ; j++){
-                if (students[j].getName().compareTo(students[j+1].getName()) > 1){
-                    temp = students[j];
+        for (int i = students.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (students[j].getName().compareTo(students[j + 1].getName()) > 1) {
+
+                   /* temp = students[j];
                     students[j] = students[j + 1];
-                    students[j+1] = temp;
+                    students[j + 1] = temp;*/
                 }
             }
 
         }
     }
+
+
+    public boolean equals(Object group) {
+        if (group == null || !(group instanceof Group)) return false;
+        Group temp = (Group) group;
+        if (this == group) return true;
+
+        for (int i = 0; i < size; i++) {
+            if (!this.students[i].equals(temp.students[i])) return false;
+            if (this.size != temp.size) return false;
+        }
+
+        return true;
+    }
+
 }

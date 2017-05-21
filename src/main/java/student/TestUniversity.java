@@ -1,4 +1,4 @@
-package student;
+package main.java.student;
 
 /**
  * Created by Sherlock on 19.05.2017.
@@ -23,7 +23,7 @@ public class TestUniversity {
         university.showUniver();
 
         university.addGroup(group1);
-        university.addGroup(group2);
+        university.addGroup(group1);
         university.showUniver();
 
         university.removeGroup(0);
