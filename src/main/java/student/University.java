@@ -35,11 +35,16 @@ public class University {
                 return false;
             }
         }
-        if (count == size || groups == null) {
-            System.out.println("Group FULL");
-            return false;
+
+        if (size < groups.length) {
+            groups[size++] = group;
+            return true;
         } else {
-            groups[count++] = group;
+            Group[] biggerGroup = new Group[groups.length + size];
+            System.arraycopy(groups, 0, biggerGroup, 0, groups.length);
+            biggerGroup[size++] = group;
+            biggerGroup[size++] =null;
+            groups = biggerGroup;
             return true;
         }
     }
