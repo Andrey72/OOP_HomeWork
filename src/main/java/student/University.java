@@ -43,7 +43,6 @@ public class University {
             Group[] biggerGroup = new Group[groups.length + size];
             System.arraycopy(groups, 0, biggerGroup, 0, groups.length);
             biggerGroup[size++] = group;
-            biggerGroup[size++] =null;
             groups = biggerGroup;
             return true;
         }

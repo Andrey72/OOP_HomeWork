@@ -31,8 +31,6 @@ public class Group {
     }
 
 
-
-
     public boolean addStudent(Student student) {
         for (int i = 0; i < size; i++) {
             if (student.equals(students[i])) {
@@ -40,19 +38,17 @@ public class Group {
             }
         }
 
-         if (size < students.length) {
+        if (size < students.length) {
             students[size++] = student;
             return true;
         } else {
             Student[] biggerArrayStudents = new Student[students.length + size];
             System.arraycopy(students, 0, biggerArrayStudents, 0, students.length);
             biggerArrayStudents[size++] = student;
-             biggerArrayStudents[size++] =null;
-                     students = biggerArrayStudents;
+            students = biggerArrayStudents;
             return true;
         }
     }
-
 
 
     public void showStudents() {

@@ -12,7 +12,6 @@ public class TestGroup {
         Student student4 = new Student("Ma5", "Muzichenko", 27);
         Student student7 = new Student("Andrey", "Kor", 27);
 
-        //Student[] students = {student1, student2, student3};
         Group group = new Group(20, 3);
         group.showStudents();
 
@@ -22,7 +21,7 @@ public class TestGroup {
         group.addStudent(student3);
         group.addStudent(student4);
         group.addStudent(student7);
-        // group.addStudent(student4);
+        group.addStudent(student4);
 
 
           group.showStudents();
