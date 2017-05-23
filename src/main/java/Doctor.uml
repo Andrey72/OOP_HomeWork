@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>main.java.week1.doctor.Doctor</OriginalElement>
+  <nodes>
+    <node x="-153.0" y="345.0">main.java.week1.doctor.Neurosurgeon</node>
+    <node x="13.5" y="-16.0">main.java.week1.doctor.Doctor</node>
+    <node x="-57.0" y="154.0">main.java.week1.doctor.Surgeon</node>
+    <node x="319.0" y="53.0">main.java.week1.doctor.Test</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="main.java.week1.doctor.Neurosurgeon" target="main.java.week1.doctor.Surgeon">
+      <point x="0.0" y="-37.5" />
+      <point x="0.0" y="59.5" />
+    </edge>
+    <edge source="main.java.week1.doctor.Surgeon" target="main.java.week1.doctor.Doctor">
+      <point x="0.0" y="-59.5" />
+      <point x="0.0" y="48.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="105.5" y="235.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
